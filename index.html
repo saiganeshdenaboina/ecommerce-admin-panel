@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to External CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+</head>
+<body>
+
+<button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+<div class="sidebar" id="sidebar">
+  <h2>Admin Panel</h2>
+  <a href="index.html">Dashboard</a>
+
+  <div class="menu-item" onclick="toggleMenu('productsMenu')">Products ⯆</div>
+  <div class="submenu" id="productsMenu">
+    <a href="products-list.html">List</a>
+    <a href="products-grid.html">Grid</a>
+    <a href="products-details.html">Details</a>
+    <a href="products-edit.html">Edit</a>
+    <a href="products-create.html">Create</a>
+  </div>
+
+  <div class="menu-item" onclick="toggleMenu('categoryMenu')">Category ⯆</div>
+  <div class="submenu" id="categoryMenu">
+    <a href="category-list.html">List</a>
+    <a href="category-edit.html">Edit</a>
+    <a href="category-create.html">Create</a>
+  </div>
+
+  <div class="menu-item" onclick="toggleMenu('inventoryMenu')">Inventory ⯆</div>
+  <div class="submenu" id="inventoryMenu">
+    <a href="inventory-warehouse.html">Warehouse</a>
+    <a href="inventory-receive.html">Receive</a>
+  </div>
+
+  <div class="menu-item" onclick="toggleMenu('ordersMenu')">Orders ⯆</div>
+  <div class="submenu" id="ordersMenu">
+    <a href="orders-list.html">List</a>
+    <a href="orders-details.html">Details</a>
+    <a href="orders-cart.html">Cart</a>
+    <a href="orders-checkout.html">Check Out</a>
+  </div>
+
+  <div class="menu-item" onclick="toggleMenu('usersMenu')">Users ⯆</div>
+  <div class="submenu" id="usersMenu">
+    <a href="profile.html">Profile</a>
+    <a href="roles.html">Roles</a>
+    <a href="permissions.html">Permissions</a>
+    <a href="customers.html">Customers</a>
+    <a href="sellers.html">Sellers</a>
+  </div>
+
+  <div class="menu-item" onclick="toggleMenu('paymentsMenu')">Payments ⯆</div>
+<div class="submenu" id="paymentsMenu">
+    <a href="payments-list.html">Payment List</a>
+    <a href="process-payment.html">Process Payment</a>
+    <a href="refund-payment.html">Refunds</a>
+</div>
+
+
+  <div class="menu-item" onclick="toggleMenu('otherMenu')">Other ⯆</div>
+  <div class="submenu" id="otherMenu">
+    <a href="coupons.html">Coupons</a>
+    <a href="reviews.html">Reviews</a>
+  </div>
+
+  <div class="menu-item" onclick="toggleMenu('appsMenu')">Other Apps ⯆</div>
+  <div class="submenu" id="appsMenu">
+    <a href="chat.html">Chat</a>
+    <a href="email.html">Email</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="todo.html">Todo</a>
+    <a href="support.html">Support</a>
+  </div>
+
+  <div class="menu-item" onclick="toggleMenu('helpMenu')">Help Center ⯆</div>
+  <div class="submenu" id="helpMenu">
+    <a href="faq.html">FAQs</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+
+  <div class="menu-item" onclick="toggleMenu('customMenu')">Custom ⯆</div>
+  <div class="submenu" id="customMenu">
+    <a href="pages.html">Pages</a>
+    <a href="authentication.html">Authentication</a>
+    <a href="widgets.html">Widgets</a>
+  </div>
+</div> 
+
+<div class="content">
+  <div class="header">
+    <h1><b>Admin Dashboard</b></h1>
+  </div>
+  <div class="cards">
+    <div class="card"><h3>150</h3><p>Total Orders</p></div>
+    <div class="card"><h3>75</h3><p>Total Products</p></div>
+    <div class="card"><h3>120</h3><p>Total Users</p></div>
+    <div class="card"><h3>$15,000</h3><p>Total Sales</p></div>
+  </div>
+
+  <!-- 🔹 Graph Section -->
+  <div class="chart-container">
+    <h2>Sales Overview</h2>
+    <canvas id="salesChart"></canvas> <!-- Graph Canvas -->
+  </div>
+</div>
+
+<script src="script.js"></script> <!-- Link to External JavaScript -->
+</body>
+</html>
